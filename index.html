@@ -224,11 +224,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 40px 60px;
+    padding: 70px 0 20px !important;
     z-index: 1;
   }
 
-  .hero-content { max-width: 750px; }
+  .hero-content { max-width: 100% !important; width: 100% !important; padding: 0 !important; overflow: visible !important; }
 
   .hero-badge {
     display: inline-block;
@@ -248,8 +248,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: -10px;
-    margin: 0 auto 30px;
+    width: 100%;
+    margin: 0 0 8px 0;
     animation: fadeInUp 0.9s ease 0.1s both;
     position: relative;
   }
@@ -275,7 +275,10 @@
   }
 
   .hero-logo {
-    width: 210px;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 180px;
+    object-fit: contain;
     display: block;
     filter: drop-shadow(0 4px 20px rgba(244,167,185,0.3));
     position: relative;
@@ -988,10 +991,9 @@
       .nav-links { display: none !important; }
       nav { padding: 10px 16px; }
       .nav-logo img { height: 44px; }
-      .hero { padding: 100px 20px 60px; }
+      .hero { padding: 68px 0 20px !important; }
       .hero h1 { font-size: 2rem; }
       .hero-logos { gap: 0; }
-      .hero-logo { width: 140px; }
       .hero-amp { font-size: 2.2rem; margin: 0 -6px; padding: 3px 5px; }
       .hero-btns { flex-direction: column; align-items: center; }
       .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; }
@@ -1667,7 +1669,7 @@
 <!-- NAVBAR -->
 <nav>
   <div class="nav-logo">
-    <img src="https://i.imgur.com/de94uUs.png" alt="Meryeli Nail Art Logo">
+    <img src="https://i.imgur.com/x6LL6na.png" alt="Meryeli Nail Art Logo">
     <div class="nav-brand-wrapper">
       <div class="nav-brand-track">
         <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Meryeli Nail Art &amp; Salón 💨</a>
@@ -1686,13 +1688,37 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-logos">
-      <img src="https://i.imgur.com/de94uUs.png" alt="Logo Meryeli" class="hero-logo">
-      <span class="hero-amp">&amp;</span>
-      <img src="https://i.imgur.com/T6lvVIS.png" alt="Logo Salón" class="hero-logo">
+    <div style="
+      width: 100% !important;
+      background: linear-gradient(135deg, #fff0f5 0%, #fde8ef 40%, #fce4ec 70%, #fff0f5 100%);
+      border-radius: 24px;
+      padding: 2px 6px;
+      margin: 0 0 6px 0;
+      box-shadow: 0 8px 32px rgba(244,167,185,0.35), 0 2px 8px rgba(224,122,153,0.15);
+      border: 1.5px solid rgba(244,167,185,0.4);
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- brillo decorativo -->
+      <div style="position:absolute;top:-40px;left:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(255,255,255,0.7) 0%,transparent 70%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:-40px;right:-40px;width:150px;height:150px;background:radial-gradient(circle,rgba(244,167,185,0.3) 0%,transparent 70%);pointer-events:none;"></div>
+      <img src="https://i.imgur.com/x6LL6na.png" alt="Logo Meryeli" style="
+        display:block !important;
+        width:100% !important;
+        min-width:100% !important;
+        max-width:none !important;
+        height:245px !important;
+        max-height:245px !important;
+        object-fit:cover !important;
+        object-position: center center;
+        margin: 0 !important;
+        flex-shrink:0 !important;
+        filter: drop-shadow(0 4px 18px rgba(224,122,153,0.45));
+        image-rendering: auto;
+      ">
+      <h1 style="font-family:'Playfair Display',serif; font-size:clamp(1.4rem,4vw,2.8rem); line-height:1.2; margin:8px 0 6px; text-align:center;">Belleza que <span style="color:var(--pink-deep);font-style:italic;">habla</span> por ti 💅✨💄🪢🛁</h1>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gray); text-align:center; margin:0 0 4px; line-height:1.5;">Uñas, peinados, trenzas, maquillaje & Salón — Todo con el toque artístico que mereces</p>
     </div>
-    <h1>Belleza que <span>habla</span> por ti 💅✨💄🪢🛁</h1>
-    <p class="hero-sub">Uñas, peinados, trenzas, maquillaje & Salón — Todo con el toque artístico que mereces</p>
     <div class="hero-btns">
       <a href="#servicios" class="btn-primary">💅 Ver Servicios</a>
       <a href="#agendar" class="btn-secondary">📅 Agendar Cita</a>
